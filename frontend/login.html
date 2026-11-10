@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entrar — {clinica}</title>
+<meta name="description" content="Acesse sua conta.">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/variables.css">
+<link rel="stylesheet" href="/css/global.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/portal.css">
+<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main class="auth-wrap">
+  <section class="card auth-card" aria-labelledby="t">
+    <h1 id="t" style="font-size:1.6rem">Entrar</h1>
+    <p class="muted small">Pacientes e equipe da clínica acessam por aqui.</p>
+    <div class="alert alert-warning mb" id="expired" hidden>Sua sessão expirou. Entre novamente.</div>
+    <div class="alert alert-danger mb" id="err" role="alert" hidden></div>
+    <form id="form" novalidate class="stack">
+      <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="username" required><span class="field-error" data-err="email" role="alert"></span></div>
+      <div class="field"><label for="password">Senha</label><input id="password" name="password" type="password" autocomplete="current-password" required><span class="field-error" data-err="password" role="alert"></span></div>
+      <button class="btn btn-block" id="submit" type="submit">Entrar</button>
+    </form>
+    <p class="center small mt">Ainda não tem conta? <a href="/cadastro.html" id="toSignup">Cadastre-se</a></p>
+  </section>
+</main>
+<script type="module" src="/js/login.js"></script>
+</body>
+</html>

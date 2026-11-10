@@ -1,0 +1,19 @@
+# Segredos e ambiente
+.env
+*.env.local
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+test_odonto.db
+*.db
+# Uploads de usuários (imagens enviadas pelo painel)
+backend/uploads/*
+!backend/uploads/.gitkeep
+# Node
+node_modules/
+# Backups
+backups/
+*.dump

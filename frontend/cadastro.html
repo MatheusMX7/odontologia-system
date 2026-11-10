@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Criar conta — {clinica}</title>
+<meta name="description" content="Cadastre-se para agendar consultas online.">
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/variables.css">
+<link rel="stylesheet" href="/css/global.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/portal.css">
+<link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main class="auth-wrap">
+  <section class="card auth-card wide" aria-labelledby="t">
+    <h1 id="t" style="font-size:1.6rem">Criar conta de paciente</h1>
+    <p class="muted small">Pedimos apenas os dados necessários para agendar e atender você.</p>
+    <div class="alert alert-danger mb" id="err" role="alert" hidden></div>
+    <form id="form" novalidate>
+      <div class="form-grid cols-2">
+        <div class="field full"><label for="full_name">Nome completo <span class="req">*</span></label><input id="full_name" name="full_name" autocomplete="name" required maxlength="150"><span class="field-error" data-err="full_name" role="alert"></span></div>
+        <div class="field"><label for="cpf">CPF <span class="req">*</span></label><input id="cpf" name="cpf" inputmode="numeric" data-mask="cpf" placeholder="000.000.000-00" required><span class="field-error" data-err="cpf" role="alert"></span></div>
+        <div class="field"><label for="birth_date">Data de nascimento <span class="req">*</span></label><input id="birth_date" name="birth_date" type="date" autocomplete="bday" required><span class="field-help" id="age"></span><span class="field-error" data-err="birth_date" role="alert"></span></div>
+        <div class="field"><label for="phone">Telefone <span class="req">*</span></label><input id="phone" name="phone" type="tel" inputmode="tel" data-mask="phone" placeholder="(00) 00000-0000" autocomplete="tel" required><span class="field-error" data-err="phone" role="alert"></span></div>
+        <div class="field"><label for="email">E-mail <span class="req">*</span></label><input id="email" name="email" type="email" autocomplete="email" required><span class="field-error" data-err="email" role="alert"></span></div>
+        <div class="field full"><label for="address">Endereço <span class="req">*</span></label><input id="address" name="address" autocomplete="street-address" required maxlength="255" placeholder="Rua, número, bairro, cidade"><span class="field-error" data-err="address" role="alert"></span></div>
+        <div class="field"><label for="password">Senha <span class="req">*</span></label><input id="password" name="password" type="password" autocomplete="new-password" required><span class="field-help">Mínimo de 8 caracteres, com letras e números.</span><span class="field-error" data-err="password" role="alert"></span></div>
+        <div class="field"><label for="password_confirm">Confirmar senha <span class="req">*</span></label><input id="password_confirm" name="password_confirm" type="password" autocomplete="new-password" required><span class="field-error" data-err="password_confirm" role="alert"></span></div>
+        <div class="field full"><label class="check"><input type="checkbox" id="lgpd_consent" name="lgpd_consent"><span>Li e concordo com o tratamento dos meus dados pessoais pela clínica para fins de cadastro, agendamento e atendimento, conforme a LGPD. <span class="req">*</span></span></label><span class="field-error" data-err="lgpd_consent" role="alert"></span></div>
+      </div>
+      <button class="btn btn-block mt" id="submit" type="submit">Criar conta</button>
+    </form>
+    <p class="center small mt">Já tem conta? <a href="/login.html">Entrar</a></p>
+  </section>
+</main>
+<script type="module" src="/js/cadastro.js"></script>
+</body>
+</html>

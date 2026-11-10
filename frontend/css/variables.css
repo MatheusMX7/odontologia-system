@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* Paleta: fundo claro, azul e verde-água */
+  --blue-50: #eef5ff;  --blue-100: #dbeafe; --blue-500: #2f7be5; --blue-600: #1f66cc; --blue-700: #1752a8;
+  --teal-50: #e6f8f6;  --teal-100: #c6f0ea; --teal-500: #14b8a6; --teal-600: #0f9d8d; --teal-700: #0b7d71;
+  --ink-900: #14304d;  --ink-700: #2c4966; --ink-500: #5b7691; --ink-300: #a9bacb;
+  --line: #e0e9f2;     --bg: #f5f9fc;      --surface: #ffffff;
+  --success: #168a4a;  --success-bg: #e3f6ec;
+  --warning: #b36b00;  --warning-bg: #fff3d9;
+  --danger: #c93a3a;   --danger-bg: #fde8e8;
+  --info: #1f66cc;     --info-bg: #e5f0ff;
+  --purple: #6a4bc4;   --purple-bg: #eee9fb;
+  --muted-bg: #edf1f5;
+
+  --font: "Manrope", "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius-sm: 8px; --radius: 14px; --radius-lg: 22px;
+  --shadow-sm: 0 1px 2px rgba(20, 48, 77, .06);
+  --shadow: 0 6px 20px rgba(20, 48, 77, .07);
+  --shadow-lg: 0 18px 48px rgba(20, 48, 77, .14);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+
+  --sidebar-w: 264px; --rail-w: 76px; --topbar-h: 64px;
+  --tap: 44px; /* área mínima de toque */
+}

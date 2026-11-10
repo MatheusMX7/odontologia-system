@@ -1,0 +1,38 @@
+/* Mobile first: tudo acima é base (celular). Abaixo, os ajustes progressivos. */
+
+/* >= 600px: celulares grandes / tablets pequenos */
+@media (min-width: 600px) {
+  .container { padding-inline: 1.5rem; }
+  .form-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .form-grid .full { grid-column: 1 / -1; }
+  .toolbar { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .slots { grid-template-columns: repeat(4, 1fr); }
+  .kv { grid-template-columns: repeat(2, 1fr); }
+  .checks { grid-template-columns: repeat(2, 1fr); }
+  #toasts { left: auto; width: 380px; }
+  .cal-day { min-height: 74px; }
+}
+
+/* >= 768px: tablets — tabelas completas, grades de 2 colunas */
+@media (min-width: 768px) {
+  .table thead { display: table-header-group; }
+  .table tbody { display: table-row-group; }
+  .table tr { display: table-row; background: transparent; border: 0; box-shadow: none; padding: 0; margin: 0; }
+  .table th { text-align: left; font-size: .78rem; font-weight: 800; color: var(--ink-500); padding: .65rem .8rem; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  .table td { display: table-cell; width: auto; text-align: left; padding: .75rem .8rem; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  .table td::before { display: none; }
+  .table td.actions { text-align: right; white-space: nowrap; border-top: 0; margin: 0; padding-top: .75rem; }
+  .table tbody tr:hover td { background: #f8fbfe; }
+  .table-wrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+  .toolbar.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .toolbar.cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* >= 1024px: notebooks e desktops */
+@media (min-width: 1024px) {
+  .stats { grid-template-columns: repeat(6, 1fr); }
+  .stats.cols-3 { grid-template-columns: repeat(3, 1fr); } .stats.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .toolbar.cols-5 { grid-template-columns: repeat(5, 1fr); }
+  .slots { grid-template-columns: repeat(6, 1fr); }
+}
