@@ -1,5 +1,42 @@
 # Sistema Web de Gestão Odontológica
 
+## Comece aqui
+
+O arquivo principal da aplicação é `backend/app/main.py`. Para iniciar o sistema no Windows:
+
+```powershell
+cd C:\caminho\odontologia-system\backend
+.\.venv\Scripts\Activate.ps1
+python -m uvicorn app.main:app --reload
+```
+
+Acesse `http://127.0.0.1:8000`.
+
+Antes do primeiro uso, prepare o banco:
+
+```powershell
+python -m pip install -r requirements.txt
+Copy-Item .env.example .env
+python -m alembic upgrade head
+python -m app.seed
+```
+
+### Mapa rápido
+
+| Local | Responsabilidade |
+|---|---|
+| `backend/app/main.py` | cria a API e registra as rotas |
+| `backend/app/routers/` | endpoints HTTP, separados por módulo |
+| `backend/app/models/` | tabelas e relacionamentos do banco |
+| `backend/app/schemas/` | validação dos dados recebidos e enviados |
+| `backend/app/services/` | regras de negócio reutilizáveis |
+| `backend/app/core/` | configurações, segurança, datas e validadores |
+| `backend/migrations/` | histórico de alterações do banco |
+| `backend/tests/` | testes automatizados |
+| `frontend/` | telas HTML, estilos CSS e scripts JavaScript |
+
+Os arquivos `.db`, `.venv`, `__pycache__` e `.pytest_cache` são arquivos locais gerados; não fazem parte do código-fonte.
+
 Portal do paciente e painel administrativo em uma única aplicação FastAPI. O backend serve também os arquivos do frontend.
 
 - **Frontend:** HTML, CSS e JavaScript puro.
